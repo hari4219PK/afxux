@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="script3.js"></script>
+    <title>Afxux</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+body{
+    background: #000;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav a{
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #f5f1f1;
+    text-decoration: none;
+    padding: 6px 35px;
+    transition: .5s;
+    background: fixed;
+}
+nav a:hover{
+    color: #0ef;
+    
+}
+ nav a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 1px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+}
+nav a:hover span{
+    transform: scale(1) translateY(0);
+    opacity: 10;
+}
+        /*-----------------login form----------------------*/
+.loginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.main{
+    width: 350px;
+    height: 500px;
+    background: red;
+    overflow: hidden;
+    background: linear-gradient(to bottom,#00b6c3,#0ef,#0c2529);
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #5bf4ff;
+}
+#chk{
+    display: none;
+}
+.signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+input{
+    width: 60%;
+    height: 30px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.main button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    color: #fff;
+    background: #0ef;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+.main button:hover{
+    border: none;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+}
+.login{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+.login label{
+    color: #000000;
+    transform: scale(.6);
+}
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+    transform:scale(1);
+}
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+}
+
+.social-container {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+    text-decoration: none;
+}
+
+.sign a{
+    transition: transform 0.5s;
+    color: #fff;
+    background: #0ef;
+    border: 1px solid #000;
+}
+.sign a:hover{
+    background-color:#fff;
+    border: none;
+	transform: translateY(-5px);
+    color: #000;
+}
+.logini a{
+    transition: transform 0.5s;
+    color: black;
+    background: #fff;
+    border: none;
+}
+.logini a:hover{
+    background-color:#0ef;
+	transform: translateY(-5px);
+    color: #fff;
+    border: 1px solid #000;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <a href="index.html">HOME<span></span></a>
+            <a href="index.html">CATEGORIE<span></span></a>
+            <a href="contact.html">CONTACT<span></span></a>
+            <a href="subscription.html">SUBSCRIBE<span></span></a>
+            <a href="loginpage.html">LOGIN<span></span></a>
+        </nav>
+    </div>
+    
+    
+
+    <div class="loginform">
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+            <div class="signup">
+                
+                <form>
+                <label for="chk" aria-hidden="true">Sign Up</label>
+                <div class="social-container sign">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <input type="text" name="txt" placeholder="User name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="pswd" placeholder="password" required>
+                <button>Sign Up</button>
+                </form>
+            </div>
+            <div class="login">
+                <form>
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <div class="social-container logini">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="pswd" placeholder="password" required>
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
